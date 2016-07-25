@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  top: 850px;
+}
+
+/*Typography
+font-family: 'Crimson Text', serif;
+font-family: 'Cormorant SC', serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Lato', sans-serif;*/
+
+h1 {
+  font-family: 'Cormorant SC', serif;
+  font-size: 50px;
+  color: white;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+p, h2 {
+  margin: 0;
+}
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  color: #6c6c6c;
+}
+p {
+  font-family: 'Lato', serif;
+  font-weight: 300;
+  font-size: 1.1em;
+  color: #313131;
+  line-height: 200%;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #6c6c6c;
+}
+.click-me {
+  font-family: 'Crimson Text', serif;
+  color: rgb(152, 90, 64);
+}
+.navlink {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  font-size: 20px;
+}
+.navlink:hover {
+  color: rgb(203, 203, 203);
+}
+
+
+
+
+
+/*Landing Page*/
+header {
+  height: 650px; /*For fixed-nav .js variable*/
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.name-box {
+  float: right;
+  padding-right: 25%;
+  padding-top: 20%;
+}
+
+
+
+/*Navigation*/
+nav {
+  display: table;
+  background-color: #964138;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  height: 50px;
+  width: 100%;
+  float: left;
+  z-index: 1;
+}
+.nav-scrolled {
+  position: fixed;
+  top: 0;
+}
+.navspace {
+  height: 50px;
+  display: block;
+}
+.no-nav-space {
+  display: none;
+}
+button {
+  width: 120px;
+  margin-top: 12px;
+  margin-left: 24px;
+  background-color: #964138;
+  border: none;
+
+}
+.navlink {
+  padding: 10px 24px;
+  text-align: center;
+}
+
+/*Sections*/
+
+
+section {
+  display: block;
+}
+.section-block {
+  padding: 48px;
+}
+
+.trans-img {
+  display: block;
+  height: 200px;
+  width: 100%;
+  background-image: url('../images/many-sams.jpg');
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+#palm {
+  height: 200px;
+  width: 200px;
+  float: right;
+  margin: 12px 40px;
+}
+
+#about {
+
+}
+
+
+/*Contact Page*/
+
+#work {
+
+}
+.gallery {
+}
+.thumbnail {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+}
+
+
+
+  /*Contact Page*/
+
+#resume {}
+
+
+
+
+
+/*Contact Page*/
+#contact {
+  background-color: #964138;
+}
+.contact-block {
+  padding: 30px;
+}
+
+#contact-title,
+.contact-graf,
+#contact-email {
+  color: white;
+  left: auto;
+  right: auto;
+
+}
+#contact-title {
+
+}
+.contact-graf {
+  font-family: 'Crimson Text', serif;
+  font-weight: 200;
+}
+#contact-email {
+  font-family: 'Quicksand', sans-serif;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+}
+#contact-email:hover {
+  border: 1px solid white;
+
+}
