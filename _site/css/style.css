@@ -253,7 +253,13 @@ button {
   display: inline;
 }
 
+
+
+
 @media (max-width: 375px) {
+  header {
+    background-image: url('../images/mobile-shot.png');
+  }
   h2 {
     margin-left: 20px;
   }
@@ -266,6 +272,9 @@ button {
   }
   .center-col {
     width: 300px;
+  }
+  .trans-img {
+    background-attachment: scroll;
   }
   #contact-email {
     font-size: 20px;
@@ -281,9 +290,6 @@ button {
   }
   #gallery-fill {
     margin-right: 0px;
-  }
-  .trans-img {
-    background-attachment: scroll;
   }
 
 }
