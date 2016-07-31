@@ -258,6 +258,9 @@ button {
   .trans-img {
     background-attachment: scroll;
   }
+  header {
+    background-attachment: scroll;
+  }
 
 }
 
