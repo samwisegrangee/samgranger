@@ -259,6 +259,9 @@ button {
 @media (max-width: 375px) {
   header {
     background-image: url('../images/mobile-shot.png');
+    background-position: center;
+    height: 100vh;
+    width: auto;
   }
   h2 {
     margin-left: 20px;
