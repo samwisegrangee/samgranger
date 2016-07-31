@@ -56,7 +56,7 @@ a:hover {
 /*Landing Page*/
 header {
   height: 650px; /*For fixed-nav .js variable*/
-  background-image: url('/images/background.jpg');
+  background-image: url('images/background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -150,13 +150,13 @@ button {
 }
 
 #img-1 {
-  background-image: url('/images/bird-building.png');
+  background-image: url('images/bird-building.png');
 }
 #img-2 {
-  background-image: url('/images/windy-burrs.jpg');
+  background-image: url('images/windy-burrs.jpg');
 }
 #img-3 {
-  background-image: url('/images/sm-many-sams.jpg');
+  background-image: url('images/sm-many-sams.jpg');
   background-position: bottom;
 }
 
