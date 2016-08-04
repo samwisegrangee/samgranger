@@ -174,7 +174,7 @@ button {
 
 .center-col {
   margin: auto;
-  width: 60%;
+  width: 70%;
   padding: 10px;
 }
 .thumbnail, .thumb-title {
@@ -261,6 +261,9 @@ button {
   header {
     background-attachment: scroll;
   }
+  .social-name {
+    font-size: 16px;
+  }
 
 }
 
@@ -283,7 +286,7 @@ button {
     margin-left: 50px;
   }
   .center-col {
-    width: 300px;
+    width: 320px;
   }
   #contact-email {
     font-size: 20px;
