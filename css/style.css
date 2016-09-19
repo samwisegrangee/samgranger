@@ -138,6 +138,9 @@ button {
 .col-r {
   float: left;
 }
+#gall-left, #gall-right {
+  padding: 2px;
+}
 
 
 .trans-img {
@@ -179,12 +182,11 @@ button {
 }
 .thumbnail, .thumb-title {
   width: 100%;
-  background-color: #eee;
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-#gallery-fill {
+#gallery-cta {
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -280,7 +282,7 @@ button {
   }
   .bg-l, .bg-r {
     margin: 0px;
-    width: 100%;
+    width: 50%;
   }
   .col-r {
     margin-left: 50px;
@@ -288,6 +290,9 @@ button {
   .center-col {
     width: 320px;
   }
+  /*#gall-left, #gall-right {
+
+  }*/
   #contact-email {
     font-size: 20px;
   }
