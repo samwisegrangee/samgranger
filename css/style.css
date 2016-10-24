@@ -142,7 +142,6 @@ button {
   padding: 2px;
 }
 
-
 .trans-img {
   display: relative;
   height: 300px;
@@ -163,8 +162,6 @@ button {
   background-position: bottom;
 }
 
-
-
 /*ABOUT*/
 
 #headshot {
@@ -172,9 +169,7 @@ button {
   padding-left: 20px;
 }
 
-
 /*WORK PAGE*/
-
 .center-col {
   margin: auto;
   width: 70%;
@@ -191,9 +186,19 @@ button {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+#mobile-cta {
+  display: none;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
 
-
-
+#mobile-gallery-cta {
+  width: 100%;
+  height: 60px;
+  margin: 20px 0px 0px 0px;
+}
 
 /*RESUME PAGE*/
 .talk-btn {
@@ -208,7 +213,6 @@ button {
   float: left;
   padding-left: 20px;
 }
-
 
 /*CONTACT PAGE*/
 #contact {
@@ -282,7 +286,7 @@ button {
   }
   .bg-l, .bg-r {
     margin: 0px;
-    width: 50%;
+    width: 100%;
   }
   .col-r {
     margin-left: 50px;
@@ -290,9 +294,33 @@ button {
   .center-col {
     width: 320px;
   }
-  /*#gall-left, #gall-right {
+  /* Mobile Gallery */
+  #gall-left, #gall-right {
+    display: inline;
+    width: 50%;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  #gall-img-l, #gall-img-r {
+    width: 100%;
+  }
+  #gall-img-l, #gall-img-l .thumbnail {
+    float: right;
+  }
+  #gall-img-r, #gall-img-r .thumbnail {
+    float: left;
+    margin-left: 0px;
+  }
+  #gallery-cta {
+    display: none;
+  }
+  #mobile-cta {
+    display: block;
+  }
 
-  }*/
+/*End Mobile Gallery*/
+
   #contact-email {
     font-size: 20px;
   }
