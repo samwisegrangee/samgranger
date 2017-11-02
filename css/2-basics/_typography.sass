@@ -1,0 +1,43 @@
+//html
+  font-weight: 200
+  line-height: 1.5
+  font-family: sans-serif
+  color: $ed-grey-dark
+  -webkit-font-smoothing: antialiased
+  //Ridiculously Large Desktop
+  @media (min-width: 2000px)
+    font-size: 26px
+  // Large Desktop
+  @media (min-width: 1201px) and (max-width: 1999px)
+    font-size: 24px
+  //Portrait tablet to landscape and Desktop
+  @media (min-width: 768px) and (max-width: 1200px)
+    font-size: 20px
+  //Landscape phone to portrait tablet
+  @media (min-width: 479px) and (max-width: 767px)
+    font-size: 16px
+  // Landscape phones and down
+  @media (max-width: 480px)
+    font-size: 14px
+
+h1
+  font-family: $display-font
+  letter-spacing: .1em
+  font-size: 50px
+  color: $sg-white
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4)
+
+p, h2
+  margin: 20px
+
+h2
+  font-family: $head-font
+  color: $sg-gray-light
+  //margin-left: -12px
+
+p
+  font-family: $body-font
+  font-weight: 300
+  font-size: 1.1em
+  color: $sg-gray-dark
+  line-height: 200%
