@@ -1,0 +1,45 @@
+/*NAVIGATION*/
+nav
+  background-color: $sg-red-dark
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4)
+  height: 75px
+  width: 100%
+  z-index: 1
+  display: flex
+  align-items: center
+  justify-content: center
+
+  ul
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    padding: 0
+
+
+    li
+      width: 100px
+      text-align: center
+
+.nav-scrolled
+  position: fixed
+  top: 0
+
+.navspace
+  height: 50px
+  display: block
+
+.no-nav-space
+  display: none
+
+@media (max-width: 480px)
+  .navlink
+    font-size: 1em
+  nav ul li
+    width: 80px
+
+@media (max-width: 480px)
+  .navlink
+    font-size: 1em
+  nav ul li
+    width: 80px
