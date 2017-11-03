@@ -295,9 +295,7 @@ section {
 
 a {
   text-decoration: none;
-  font-family: "Quicksand", sans-serif;
   color: white;
-  font-size: 20px;
 }
 
 a:hover {
@@ -305,7 +303,6 @@ a:hover {
 }
 
 .click-me {
-  font-family: 'Crimson Text', serif;
   color: #985a40;
 }
 
@@ -316,6 +313,10 @@ a:hover {
 button {
   background-color: #964138;
   border: none;
+}
+
+p a {
+  font-style: italic;
 }
 
 h1 {
@@ -331,12 +332,12 @@ p, h2 {
 }
 
 h2 {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Cormorant SC", serif;
   color: #6c6c6c;
 }
 
 p {
-  font-family: "Lato", serif;
+  font-family: "Crimson Text", serif;
   font-weight: 300;
   font-size: 1.1em;
   color: #313131;
@@ -359,6 +360,8 @@ nav {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "Cormorant SC", serif;
+  letter-spacing: 0.1em;
 }
 
 nav ul {
@@ -503,6 +506,8 @@ header {
   margin: 10px 0;
   width: 100%;
   text-align: center;
+  font-family: "Cormorant SC", serif;
+  letter-spacing: 0.1em;
 }
 
 #resume-pic {
@@ -571,7 +576,7 @@ header {
 }
 
 .contact-graf, #contact-email, .social-links {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Cormorant SC", serif;
   color: white;
   display: table;
   margin: 0 auto;
@@ -588,7 +593,7 @@ header {
 }
 
 .social-name {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Cormorant SC", serif;
   color: white;
   display: inline;
   baseline-shift: 20px;
