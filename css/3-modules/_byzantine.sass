@@ -1,0 +1,83 @@
+.byz-wheel
+  max-height: 85vh
+
+#byzantine-wheel
+  transform-origin: center
+  animation: rotateRight 36s infinite linear
+
+  .outer-wheel
+    transform-origin: center
+    animation: rotateRight 36s infinite linear
+
+  .inner-wheel
+    transform-origin: center
+    animation: rotateRight 20s infinite linear
+
+  .accent
+    display: none
+
+  .rivulet
+    transform-origin: center
+    animation: rotateLeft 3s infinite linear
+    //animation: fadeIt 3s infinite linear
+
+#byzantine-negative
+  fill: #eee
+  //transform-origin: center
+  //animation: rotateRight 36s infinite linear
+  //animation: fadeIt 3s infinite ease-in-out
+
+  .outer-wheel
+    transform-origin: center
+    animation: rotateLeft 36s infinite linear
+
+  .inner-wheel
+    transform-origin: center
+    animation: rotateLeft 20s infinite linear
+  //.ornament
+    animation: fadeIt 3s infinite linear
+
+#byzantine-runner
+  fill: #eee
+
+@keyframes rotateRight
+	0%
+		transform: rotate(0deg)
+
+	100%
+		transform: rotate(359deg)
+
+@keyframes rotateLeft
+	0%
+		transform: rotate(359deg)
+
+	100%
+		transform: rotate(0deg)
+
+@keyframes fadeIt
+  0%, 100%
+    opacity: 0
+  50%
+    opacity: 1
+
+
+#byzantine-runner
+  //stroke: #333
+  //stroke-width: 2px
+  animation: fillIn 5s linear
+  //animation-name: traceAround, fillIn
+  //animation-duration: 5s
+  //animation-delay: 0s, 5s
+  //stroke-dasharray: 1000
+  //stroke-dashoffset: 1000
+
+@keyframes traceAround
+  to
+    stroke-dashoffset: 0
+
+@keyframes fillIn
+  from
+    fill-opacity: 0
+
+  to
+    fill-opacity: 1

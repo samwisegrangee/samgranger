@@ -12,7 +12,7 @@ $(document).ready(function() {
 		} else {
 			nav.removeClass("nav-scrolled")
 		}
-		
+
 	});
 
 	//Smooth scrolling between ""#anchor" links.
@@ -28,6 +28,76 @@ $(document).ready(function() {
 			}, 900, 'swing', function () {
 					window.location.hash = target;
 			});
+	});
+
+	//Make double to simulate repeating
+	$('.scroll-gallery').each(function(){
+		$('.scroller', this).clone().appendTo(this);
+	});
+	// Add animations on scroll
+	$(window).on('scroll', function () {
+		var scrollTop   = $(window).scrollTop(),
+				gallOffset  = $('#work').offset().top,
+				distance    = (gallOffset - scrollTop);
+
+		if(distance < 0) {
+			$('.scroller').addClass('scroll-it');
+		} else {
+			$('.scroller').removeClass('scroll-it');
+		}
+	});
+
+	//Lightbox Display with Clicked Image\
+	$('.showcase img').click(function () {
+		var source   = $(this).attr('src'),
+				caption  = $(this).attr('alt');
+		$('#lightBox img').attr({'src': source, 'alt': caption});
+		$('#img-caption').text(caption);
+		$('#lightBox').fadeIn();
+	});
+
+	$('#lightBox').click(function () {
+		$(this).fadeOut();
+	});
+
+	// Scroll Gallery
+	$('.see-below .scroll-item').click(function(){
+		var heading    = $('h3', this),
+				describe   = $('p', this),
+				image 		 = $('img', this);
+
+		$('.open').removeClass('open');
+		$('.description h3').remove();
+		$('.description p').remove();
+		$('.feature-image img').remove(); // If the window is open, just swap src
+		$(this).closest('.scroll-holder').addClass('open');
+
+		if($(this).hasClass('viewing') == true)	{
+			$('.open .toggle-text').css('height', '0');
+			var imagePath = image.attr('src');
+			$('.open .toggle-text img').attr('src', imagePath);
+			$('.toggle-svg').delay(500).addClass('closed');
+		} else {
+
+			$('.viewing').removeClass('viewing');
+
+			$(this).addClass('viewing');
+
+			image.clone().appendTo('.open .feature-image');
+			heading.clone().appendTo('.open .description');
+			describe.clone().appendTo('.open .description');
+			$('.toggle-svg').removeClass('closed');
+
+			function resizeGallery() {
+				jQuery('.scroll-holder').each(function(){
+					var fullHeight = jQuery('.half-holder', this).outerHeight();
+					jQuery('.toggle-text', this).css('height', fullHeight);
+				});
+			}
+			setTimeout(resizeGallery, 50);
+		}
+		jQuery(".scroll-holder:not(.open) .toggle-text").css('height', 0);
+
 	});
 
 });
