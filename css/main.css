@@ -313,21 +313,19 @@ p {
     animation: rotateLeft 3s infinite linear; }
 
 #byzantine-negative {
-  fill: #eee;
-  -webkit-animation: fadeIt 3s infinite ease-in-out;
-  animation: fadeIt 3s infinite ease-in-out; }
+  fill: #eee; }
   #byzantine-negative .outer-wheel {
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center;
-    -webkit-animation: rotateRight 36s infinite linear;
-    animation: rotateRight 36s infinite linear; }
+    -webkit-animation: rotateLeft 36s infinite linear;
+    animation: rotateLeft 36s infinite linear; }
   #byzantine-negative .inner-wheel {
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center;
-    -webkit-animation: rotateRight 20s infinite linear;
-    animation: rotateRight 20s infinite linear; }
+    -webkit-animation: rotateLeft 20s infinite linear;
+    animation: rotateLeft 20s infinite linear; }
 
 #byzantine-runner {
   fill: #eee; }
@@ -376,6 +374,30 @@ p {
   50% {
     opacity: 1; } }
 
+#byzantine-runner {
+  -webkit-animation: fillIn 5s linear;
+  animation: fillIn 5s linear; }
+
+@-webkit-keyframes traceAround {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes traceAround {
+  to {
+    stroke-dashoffset: 0; } }
+
+@-webkit-keyframes fillIn {
+  from {
+    fill-opacity: 0; }
+  to {
+    fill-opacity: 1; } }
+
+@keyframes fillIn {
+  from {
+    fill-opacity: 0; }
+  to {
+    fill-opacity: 1; } }
+
 .gallery {
   overflow-x: hidden;
   background: #333;
@@ -385,6 +407,9 @@ p {
   color: white; }
   .gallery p {
     color: white; }
+  .gallery svg {
+    fill-opacity: 0.1;
+    max-width: 100vw; }
 
 .scroll-holder {
   position: relative;
@@ -418,6 +443,11 @@ p {
   -o-transition: height 1s linear;
   transition: height 1s linear; }
   .toggle-text .half-holder {
+    position: relative;
+    max-width: 100vw; }
+  .toggle-text svg {
+    position: absolute; }
+  .toggle-text .half-holder {
     overflow: hidden; }
   .toggle-text img {
     display: block;
@@ -427,6 +457,9 @@ p {
     color: #985a40; }
     .toggle-text a:hover {
       color: #964138; }
+
+.closed svg {
+  height: 0; }
 
 .scroller {
   display: inline-block; }
@@ -517,9 +550,15 @@ p {
       padding: 10px;
       border-radius: 10px; }
       .light-box .container .modal-content img {
-        width: 100%; }
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid white; }
       .light-box .container .modal-content p {
         color: white; }
+
+@media (max-width: 800px) {
+  .gallery .feature-image {
+    display: none; } }
 
 /*NAVIGATION*/
 nav {
@@ -658,6 +697,11 @@ header {
   padding-left: 20px; }
 
 /*WORK PAGE*/
+#work #byzantine-runner {
+  position: absolute;
+  fill: transparent;
+  stroke: #aaa; }
+
 .thumbnail, .thumb-title {
   width: 100%;
   display: inline-block;

@@ -60,6 +60,7 @@ $(document).ready(function() {
 		$(this).fadeOut();
 	});
 
+	// Scroll Gallery
 	$('.see-below .scroll-item').click(function(){
 		var heading    = $('h3', this),
 				describe   = $('p', this),
@@ -75,6 +76,7 @@ $(document).ready(function() {
 			$('.open .toggle-text').css('height', '0');
 			var imagePath = image.attr('src');
 			$('.open .toggle-text img').attr('src', imagePath);
+			$('.toggle-svg').delay(500).addClass('closed');
 		} else {
 
 			$('.viewing').removeClass('viewing');
@@ -84,6 +86,8 @@ $(document).ready(function() {
 			image.clone().appendTo('.open .feature-image');
 			heading.clone().appendTo('.open .description');
 			describe.clone().appendTo('.open .description');
+			$('.toggle-svg').removeClass('closed');
+
 			function resizeGallery() {
 				jQuery('.scroll-holder').each(function(){
 					var fullHeight = jQuery('.half-holder', this).outerHeight();
@@ -92,7 +96,7 @@ $(document).ready(function() {
 			}
 			setTimeout(resizeGallery, 50);
 		}
-		jQuery(".scroll-holder:not(.active) .toggle-text").css('height', 0);
+		jQuery(".scroll-holder:not(.open) .toggle-text").css('height', 0);
 
 	});
 
