@@ -164,6 +164,38 @@
       p
         color: $sg-white
 
-@media (max-width: 800px)
+
+
+// Ridiculuously Large Screen
+@media (min-width: 2000px)
+  .scroll-item img
+    height: 500px
+  .light-box .container
+    max-width: 60vw
+
+// Large Desktop
+@media (min-width: 1201px) and (max-width: 1999px)
+  .scroll-item img
+    height: 325px
+
+//Portrait tablet to landscape and Desktop
+@media (min-width: 768px) and (max-width: 1200px)
+  .scroll-item img
+    height: 250px
+//Landscape phone to portrait tablet
+@media (min-width: 479px) and (max-width: 767px)
+  .scroll-item img
+    height: 200px
+
   .gallery .feature-image
     display: none
+
+  .light-box .container
+    max-width: 80vw
+// Landscape phones and down
+@media (max-width: 480px)
+  .scroll-item img
+    height: 200px
+
+  .light-box .container
+    max-width: 98vw 
