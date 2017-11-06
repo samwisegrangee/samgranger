@@ -34,6 +34,7 @@
   img
     height: 200px
     border: 1px solid $sg-white
+
   h3
     display: none
   p
@@ -83,16 +84,19 @@
   height: 1em
   width: 1em
   border-radius: 50%
-  background: $sg-white
+  border: 0.1em solid $sg-white
   display: inline-block
   margin: 1em 0.4em
 
 .closed svg
   height: 0
 
-//.scroller
-  background: #aaa
-.open
+.active-dot
+  background: $sg-red-dark
+.viewed
+  opacity: 1
+
+//.open
   .scroller.scroll-it
     animation-play-state: paused
 
@@ -195,7 +199,9 @@
 // Landscape phones and down
 @media (max-width: 480px)
   .scroll-item img
-    height: 200px
+    height: 175px
 
   .light-box .container
-    max-width: 98vw 
+    max-width: 98vw
+  .scroll-it
+    animation-duration: 26s

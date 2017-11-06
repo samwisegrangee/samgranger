@@ -1,4 +1,28 @@
 $(document).ready(function() {
+
+	function resizeImages(){
+		var ww = $(window).width();
+		if (ww < 767){
+			$('img').each(function(){
+		    var filePath = $(this).attr("src"),
+						newPath  = filePath.replace('full-img', 'small-img');
+				$(this).attr('src', newPath);
+			});
+		}
+		if (ww > 767){
+			$('img').each(function(){
+		    var filePath = $(this).attr("src"),
+						newPath  = filePath.replace('small-img', 'full-img');
+				$(this).attr('src', newPath);
+			});
+		}
+	}
+	resizeImages();
+	$(window).resize(function(){
+		resizeImages();
+	});
+
+
 	// Sticky nav bar
 	var nav = $("nav");
 	var nvsp = $(".navspace");
@@ -43,6 +67,42 @@ $(document).ready(function() {
 		var container = $(this).closest(".scroll-gallery").find(".circle-holder");
 		$('<div class="circle"></div>').appendTo(container);
 	});
+
+	$('.scroll-holder', ).each(function(){
+		var gallId = $(this).attr('id');
+		$('.scroller', this).each(function(){
+			$('.scroll-item', this).addClass(function(i) {
+				 return 'image-'+gallId+'_'+(i+1);
+			});
+		});
+
+		$('.circle', this).attr('id', function(i) {
+			 return 'circle-'+gallId+'_'+(i+1);
+		});
+	});
+	
+	$('.scroll-item').click(function(){
+
+		$('.scroll-item').removeClass('viewed');
+		var id = $(this).closest(".scroll-holder").prop("id"),
+				num = $(this).attr('class').match(/\d+$/)[0];
+		//console.log(id +' '+num);
+		$('.circle-'+id+'_'+num).addClass('active-dot');
+		//$(this).addClass('viewed');
+	});*/
+
+	/*$('.circle').click(function(){
+		$('.active-dot').removeClass('active-dot');
+		$(this).addClass('active-dot');
+		var id = $(this).closest(".scroll-holder").prop("id"),
+				num = $(this).attr('id').split('_').pop();
+
+		$('.image-'+id+'_'+num).trigger('click');
+		//console.log('.image-'+id+'_'+num);
+	});*/
+
+
+
 	// Move gallery based on click
 	/*$('.scroll-item').click(function(){
 		var thisWidth = $(this).width(),
