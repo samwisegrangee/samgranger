@@ -62,7 +62,7 @@ $(document).ready(function() {
 	});
 
 	// Make clickable gallery
-
+	/*
 	$('.scroller:not(.gall-clone) .scroll-item').each(function(){
 		var container = $(this).closest(".scroll-gallery").find(".circle-holder");
 		$('<div class="circle"></div>').appendTo(container);
@@ -80,7 +80,7 @@ $(document).ready(function() {
 			 return 'circle-'+gallId+'_'+(i+1);
 		});
 	});
-	/*
+	
 	$('.scroll-item').click(function(){
 
 		$('.scroll-item').removeClass('viewed');
@@ -91,7 +91,7 @@ $(document).ready(function() {
 		//$(this).addClass('viewed');
 	});*/
 
-	$('.circle').click(function(){
+	/*$('.circle').click(function(){
 		$('.active-dot').removeClass('active-dot');
 		$(this).addClass('active-dot');
 		var id = $(this).closest(".scroll-holder").prop("id"),
@@ -99,7 +99,7 @@ $(document).ready(function() {
 
 		$('.image-'+id+'_'+num).trigger('click');
 		//console.log('.image-'+id+'_'+num);
-	});
+	});*/
 
 
 
