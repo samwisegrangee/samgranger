@@ -420,7 +420,8 @@ p {
   width: 100vw;
   text-align: center; }
   .gallery-header h2 {
-    color: white; }
+    color: white;
+    margin-top: 2em; }
 
 .scroll-gallery {
   white-space: nowrap; }
@@ -464,8 +465,27 @@ p {
     .toggle-text a:hover {
       color: #964138; }
 
+.circle-holder {
+  width: 100vw;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center; }
+
+.circle {
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  background: white;
+  display: inline-block;
+  margin: 1em 0.4em; }
+
 .closed svg {
   height: 0; }
+
+.open .scroller.scroll-it {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused; }
 
 .scroller {
   display: inline-block; }

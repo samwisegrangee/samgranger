@@ -30,10 +30,34 @@ $(document).ready(function() {
 			});
 	});
 
+
 	//Make double to simulate repeating
 	$('.scroll-gallery').each(function(){
-		$('.scroller', this).clone().appendTo(this);
+		$('.scroller', this).clone().addClass('gall-clone').appendTo(this);
+		$(this).append('<div class="circle-holder"></div>')
 	});
+
+	// Make clickable gallery
+	/*
+	$('.scroller:not(.gall-clone) .scroll-item').each(function(){
+		var container = $(this).closest(".scroll-gallery").find(".circle-holder");
+		$('<div class="circle"></div>').appendTo(container);
+	});
+	// Move gallery based on click
+	/*$('.scroll-item').click(function(){
+		var thisWidth = $(this).width(),
+				gallWidth = $(this).parent('.scroller').width(),
+				widthAdd = 0,
+		    prevLength = $(this).prevAll().length;
+
+    for(i=0; i<prevLength; i++) {
+        widthAdd = widthAdd+parseInt($(this).siblings().eq(i).width());
+    }
+		var percent = widthAdd/gallWidth;
+		console.log('This comes in at ' + percent + '% of the gallery');
+		console.log('This is '+ thisWidth + ' of '+ gallWidth +' with '+ widthAdd + 'coming before');
+	});*/
+
 	// Add animations on scroll
 	$(window).on('scroll', function () {
 		var scrollTop   = $(window).scrollTop(),
@@ -77,6 +101,7 @@ $(document).ready(function() {
 			var imagePath = image.attr('src');
 			$('.open .toggle-text img').attr('src', imagePath);
 			$('.toggle-svg').delay(500).addClass('closed');
+			$('.open').removeClass('open');
 		} else {
 
 			$('.viewing').removeClass('viewing');
