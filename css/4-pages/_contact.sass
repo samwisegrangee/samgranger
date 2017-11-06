@@ -1,50 +1,63 @@
 /*CONTACT PAGE*/
 .contact
-  background-color: $sg-red-dark
-  width: 100%
-  margin-top: -25px
+  height: 100vh
+  #byzantine-negative
+    position: absolute
+    fill: #ddd
+    margin-top: -6vh
+  .center-col
+    position: absolute
+    width: 100vw
 
-.contact-block
-  justify-content: center
-  align-items: center
-  padding-top: 25px
-  padding-bottom: 25px
+  .content
+    width: 48%
+  h2
+    text-align: center
 
+  .contact-icon
+    height: 2em
+    width: 2em
+    transition: all 0.3s ease-out
 
-.contact-graf, #contact-email, .social-links
+    &:hover
+      height: 2.2em
+      width: 2.2em
+      fill: $sg-red-dark
+
+  .contact-explain
+    padding: 0.25em 1em
+
+  .center-col
+    p
+      padding-top: 2em
+      text-align: center
+      font-size: 1.2em
+      letter-spacing: 0.05em
+
+    .button-long
+      display: block
+      width: 100%
+      background: $sg-red-dark
+      color: $sg-white
+      letter-spacing: 0.07em
+      margin-top: 2em
+      transition: all 0.3s linear
+
+      &:hover
+        letter-spacing: 0.09em
+
+.social-links
   font-family: $head-font
   color: $sg-white
   display: table
-  margin: 0 auto
+  margin: 2em auto 0 auto
 
-
-#contact-email
-  padding: 8px 12px
-  border: 1px solid transparent
-  font-size: 2em
-
-#contact-email:hover
-  border: 1px solid $sg-white
-
-
-.social-name
-  font-family: $head-font
-  color: $sg-white
-  display: inline
-  baseline-shift: 20px
-
-.social-img
-  height: 30px
-  width: 30px
-  display: inline
-
-
-.social-click
-  display: inline
+  a
+    padding: 0 1em
 
 @media (max-width: 480px)
-  #contact-email
-    font-size: 1.25em
-
-  .social-click
-    display: block
+  .social-links a
+    padding: 0 0.5em
+  .long-buttom
+    font-size: 0.9em
+    letter-spacing: 0

@@ -392,10 +392,6 @@ p {
   50% {
     opacity: 1; } }
 
-#byzantine-runner {
-  -webkit-animation: fillIn 5s linear;
-  animation: fillIn 5s linear; }
-
 @-webkit-keyframes traceAround {
   to {
     stroke-dashoffset: 0; } }
@@ -804,50 +800,59 @@ header {
 
 /*CONTACT PAGE*/
 .contact {
-  background-color: #964138;
-  width: 100%;
-  margin-top: -25px; }
+  height: 100vh; }
+  .contact #byzantine-negative {
+    position: absolute;
+    fill: #ddd;
+    margin-top: -6vh; }
+  .contact .center-col {
+    position: absolute;
+    width: 100vw; }
+  .contact .content {
+    width: 48%; }
+  .contact h2 {
+    text-align: center; }
+  .contact .contact-icon {
+    height: 2em;
+    width: 2em;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+    .contact .contact-icon:hover {
+      height: 2.2em;
+      width: 2.2em;
+      fill: #964138; }
+  .contact .contact-explain {
+    padding: 0.25em 1em; }
+  .contact .center-col p {
+    padding-top: 2em;
+    text-align: center;
+    font-size: 1.2em;
+    letter-spacing: 0.05em; }
+  .contact .center-col .button-long {
+    display: block;
+    width: 100%;
+    background: #964138;
+    color: white;
+    letter-spacing: 0.07em;
+    margin-top: 2em;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+    .contact .center-col .button-long:hover {
+      letter-spacing: 0.09em; }
 
-.contact-block {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px; }
-
-.contact-graf, #contact-email, .social-links {
+.social-links {
   font-family: "Cormorant SC", serif;
   color: white;
   display: table;
-  margin: 0 auto; }
-
-#contact-email {
-  padding: 8px 12px;
-  border: 1px solid transparent;
-  font-size: 2em; }
-
-#contact-email:hover {
-  border: 1px solid white; }
-
-.social-name {
-  font-family: "Cormorant SC", serif;
-  color: white;
-  display: inline;
-  baseline-shift: 20px; }
-
-.social-img {
-  height: 30px;
-  width: 30px;
-  display: inline; }
-
-.social-click {
-  display: inline; }
+  margin: 2em auto 0 auto; }
+  .social-links a {
+    padding: 0 1em; }
 
 @media (max-width: 480px) {
-  #contact-email {
-    font-size: 1.25em; }
-  .social-click {
-    display: block; } }
+  .social-links a {
+    padding: 0 0.5em; }
+  .long-buttom {
+    font-size: 0.9em;
+    letter-spacing: 0; } }
