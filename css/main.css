@@ -194,7 +194,7 @@ body {
 
 .trans-img {
   position: relative;
-  height: 60vw;
+  height: 40vw;
   width: 100vw;
   background-size: cover;
   background-position: center;
@@ -494,16 +494,18 @@ p {
   height: 1em;
   width: 1em;
   border-radius: 50%;
-  background: white;
+  border: 0.1em solid white;
   display: inline-block;
   margin: 1em 0.4em; }
 
 .closed svg {
   height: 0; }
 
-.open .scroller.scroll-it {
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused; }
+.active-dot {
+  background: #964138; }
+
+.viewed {
+  opacity: 1; }
 
 .scroller {
   display: inline-block; }
@@ -624,9 +626,12 @@ p {
 
 @media (max-width: 480px) {
   .scroll-item img {
-    height: 200px; }
+    height: 175px; }
   .light-box .container {
-    max-width: 98vw; } }
+    max-width: 98vw; }
+  .scroll-it {
+    -webkit-animation-duration: 26s;
+    animation-duration: 26s; } }
 
 /*NAVIGATION*/
 nav {
