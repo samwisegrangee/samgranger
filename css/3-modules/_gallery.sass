@@ -22,6 +22,7 @@
   text-align: center
   h2
     color: $sg-white
+    margin-top: 2em
 .scroll-gallery
 	white-space: nowrap
 
@@ -73,11 +74,28 @@
 //#illustration-gallery
   margin-top: -15vh
 
+.circle-holder
+  width: 100vw
+  align-items: center
+  text-align: center
+
+.circle
+  height: 1em
+  width: 1em
+  border-radius: 50%
+  background: $sg-white
+  display: inline-block
+  margin: 1em 0.4em
+
 .closed svg
   height: 0
 
 //.scroller
   background: #aaa
+.open
+  .scroller.scroll-it
+    animation-play-state: paused
+
 .scroller
 	display: inline-block
 
