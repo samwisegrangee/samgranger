@@ -1,23 +1,26 @@
+function resizeImages(){
+	var ww = $(window).width();
+	if (ww < 767){
+		$('img').each(function(){
+			var filePath = $(this).attr("src"),
+					newPath  = filePath.replace('full-img', 'small-img');
+			$(this).attr('src', newPath);
+		});
+	}
+	if (ww > 767){
+		$('img').each(function(){
+			var filePath = $(this).attr("src"),
+					newPath  = filePath.replace('small-img', 'full-img');
+			$(this).attr('src', newPath);
+		});
+	}
+}
+
 $(document).ready(function() {
 
-	function resizeImages(){
-		var ww = $(window).width();
-		if (ww < 767){
-			$('img').each(function(){
-		    var filePath = $(this).attr("src"),
-						newPath  = filePath.replace('full-img', 'small-img');
-				$(this).attr('src', newPath);
-			});
-		}
-		if (ww > 767){
-			$('img').each(function(){
-		    var filePath = $(this).attr("src"),
-						newPath  = filePath.replace('small-img', 'full-img');
-				$(this).attr('src', newPath);
-			});
-		}
-	}
+
 	resizeImages();
+
 	$(window).resize(function(){
 		resizeImages();
 	});
@@ -80,7 +83,7 @@ $(document).ready(function() {
 			 return 'circle-'+gallId+'_'+(i+1);
 		});
 	});
-	
+
 	$('.scroll-item').click(function(){
 
 		$('.scroll-item').removeClass('viewed');
