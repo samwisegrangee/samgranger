@@ -16,30 +16,50 @@ function resizeImages(){
 	}
 }
 
+function byzHub() {
+	$('.wheel-box').each(function(){
+		var halfHeight = ($(this).height())/2,
+				moveItUp = '-'+(halfHeight-10)+'px';
+		$('h2', this).css('margin-top', moveItUp);
+	});
+}
+
 $(document).ready(function() {
 
-
 	resizeImages();
+	byzHub();
 
 	$(window).resize(function(){
 		resizeImages();
 	});
 
+	// Scroll Events
+	$(window).on('scroll', function () {
+		var scrollTop   = $(this).scrollTop(),
+				aboutOffset = $('#about').offset().top
+				navHeight   = $('nav').height(),
+				gallOffset  = $('#work').offset().top;
 
-	// Sticky nav bar
-	var nav = $("nav");
-	var nvsp = $(".navspace");
-
-	$(window).scroll(function(){
-
-		if( $(this).scrollTop() > 650 ) {
-			nav.addClass("nav-scrolled", function(){
-				nvsp.addClass("no-nav-space");
+		// Sticky Nav Bar
+		if(scrollTop > (aboutOffset-navHeight)){
+			$("nav").addClass("nav-scrolled", function(){
+				$(".navspace").addClass("no-nav-space");
 			});
 		} else {
-			nav.removeClass("nav-scrolled")
+			$("nav").removeClass("nav-scrolled")
 		}
 
+		//Animate Galleries
+		if($('.opened').length > 0 && $('.faded-button').length < 1) {
+			$('.button-long').addClass('faded-button');
+		}
+
+		//Animate Galleries
+		if(scrollTop > gallOffset) {
+			$('.scroller').addClass('scroll-it');
+		} else {
+			$('.scroller').removeClass('scroll-it');
+		}
 	});
 
 	//Smooth scrolling between ""#anchor" links.
@@ -58,10 +78,22 @@ $(document).ready(function() {
 	});
 
 
+
+	// Pop in Services Copy
+	$('.work-column').click(function(){
+
+		var client = $('.client-quote', this).text(),
+				myself = $('.my-response', this).text();
+
+		$('.work-explain .left-half p').text(client).addClass('fade-half');
+		$('.work-explain .right-half p').html(myself).addClass('fade-whole');
+		$('.work-explain').addClass('opened').removeClass('closed-up');
+	});
+
 	//Make double to simulate repeating
 	$('.scroll-gallery').each(function(){
 		$('.scroller', this).clone().addClass('gall-clone').appendTo(this);
-		$(this).append('<div class="circle-holder"></div>')
+		$(this).append('<div class="circle-holder"></div>');
 	});
 
 	// Make clickable gallery
@@ -121,18 +153,9 @@ $(document).ready(function() {
 		console.log('This is '+ thisWidth + ' of '+ gallWidth +' with '+ widthAdd + 'coming before');
 	});*/
 
-	// Add animations on scroll
-	$(window).on('scroll', function () {
-		var scrollTop   = $(window).scrollTop(),
-				gallOffset  = $('#work').offset().top,
-				distance    = (gallOffset - scrollTop);
 
-		if(distance < 0) {
-			$('.scroller').addClass('scroll-it');
-		} else {
-			$('.scroller').removeClass('scroll-it');
-		}
-	});
+
+
 
 	//Lightbox Display with Clicked Image\
 	$('.showcase img').click(function () {
