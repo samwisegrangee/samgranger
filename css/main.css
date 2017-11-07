@@ -316,29 +316,26 @@ p {
 .byz-wheel {
   max-height: 85vh; }
 
-#byzantine-wheel .outer-wheel {
+#byzantine-wheel {
   -webkit-transform-origin: center;
   -ms-transform-origin: center;
   transform-origin: center;
   -webkit-animation: rotateRight 36s infinite linear;
   animation: rotateRight 36s infinite linear; }
-
-#byzantine-wheel .inner-wheel {
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: rotateRight 20s infinite linear;
-  animation: rotateRight 20s infinite linear; }
-
-#byzantine-wheel .accent {
-  display: none; }
-
-#byzantine-wheel .rivulet {
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: rotateLeft 3s infinite linear;
-  animation: rotateLeft 3s infinite linear; }
+  #byzantine-wheel .outer-wheel {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: rotateRight 36s infinite linear;
+    animation: rotateRight 36s infinite linear; }
+  #byzantine-wheel .inner-wheel {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: rotateRight 20s infinite linear;
+    animation: rotateRight 20s infinite linear; }
+  #byzantine-wheel .accent {
+    display: none; }
 
 #byzantine-negative {
   fill: #eee; }
@@ -729,6 +726,10 @@ header {
   fill: white;
   max-height: 60vh;
   max-width: 80vw; }
+
+.single-spin {
+  -webkit-animation: rotateLeft 3s linear;
+  animation: rotateLeft 3s linear; }
 
 .name-box {
   width: 100%;

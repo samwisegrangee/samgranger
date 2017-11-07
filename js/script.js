@@ -76,7 +76,9 @@ $(document).ready(function() {
 					window.location.hash = target;
 			});
 	});
-
+	//$('#home a').click(function(){
+		//$('#byzantine-wheel .rivulet').addClass('spin-once');
+	//});
 
 
 	// Pop in Services Copy
