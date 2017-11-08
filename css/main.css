@@ -318,26 +318,22 @@ p {
 .byz-wheel {
   max-height: 85vh; }
 
-#byzantine-wheel {
+#byzantine-wheel .outer-wheel {
   -webkit-transform-origin: center;
   -ms-transform-origin: center;
   transform-origin: center;
   -webkit-animation: rotateRight 36s infinite linear;
   animation: rotateRight 36s infinite linear; }
-  #byzantine-wheel .outer-wheel {
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-    -webkit-animation: rotateRight 36s infinite linear;
-    animation: rotateRight 36s infinite linear; }
-  #byzantine-wheel .inner-wheel {
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-    -webkit-animation: rotateRight 20s infinite linear;
-    animation: rotateRight 20s infinite linear; }
-  #byzantine-wheel .accent {
-    display: none; }
+
+#byzantine-wheel .inner-wheel {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: rotateRight 20s infinite linear;
+  animation: rotateRight 20s infinite linear; }
+
+#byzantine-wheel .accent {
+  display: none; }
 
 #byzantine-negative {
   fill: #eee; }
@@ -813,7 +809,8 @@ header {
 #work #byzantine-runner {
   position: absolute;
   fill: transparent;
-  stroke: #aaa; }
+  stroke: #aaa;
+  opacity: 0.9; }
 
 #work h3 {
   text-align: center;
