@@ -36,12 +36,11 @@ $(document).ready(function() {
 	// Scroll Events
 	$(window).on('scroll', function () {
 		var scrollTop   = $(this).scrollTop(),
-				aboutOffset = $('#about').offset().top
 				navHeight   = $('nav').height(),
-				gallOffset  = $('#work').offset().top;
+				workOffset  = $('#work').offset().top;
 
 		// Sticky Nav Bar
-		if(scrollTop > (aboutOffset-navHeight)){
+		if(scrollTop > (workOffset-navHeight)){
 			$("nav").addClass("nav-scrolled", function(){
 				$(".navspace").addClass("no-nav-space");
 			});
@@ -55,7 +54,7 @@ $(document).ready(function() {
 		}
 
 		//Animate Galleries
-		if(scrollTop > gallOffset) {
+		if(scrollTop > workOffset) {
 			$('.scroller').addClass('scroll-it');
 		} else {
 			$('.scroller').removeClass('scroll-it');
