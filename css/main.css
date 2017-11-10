@@ -201,7 +201,8 @@ body {
   background-attachment: fixed; }
 
 #img-1 {
-  background-image: url("../images/full-img/bird-building.png"); }
+  background-image: url("../images/full-img/code-sketches.jpg");
+  background-position: top; }
 
 #img-2 {
   background-image: url("../images/full-img/windy-burrs.jpg"); }
@@ -454,6 +455,14 @@ p {
   .scroll-item img {
     height: 200px;
     border: 1px solid white; }
+  .scroll-item ul {
+    display: none; }
+    .scroll-item ul li {
+      margin: 1em 0; }
+      .scroll-item ul li p {
+        font-family: "Vollkorn", serif;
+        line-height: 1.5;
+        margin: 0; }
   .scroll-item h3 {
     display: none; }
   .scroll-item p {
