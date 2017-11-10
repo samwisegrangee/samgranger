@@ -153,22 +153,33 @@ $(document).ready(function() {
 		console.log('This comes in at ' + percent + '% of the gallery');
 		console.log('This is '+ thisWidth + ' of '+ gallWidth +' with '+ widthAdd + 'coming before');
 	});*/
+	$('.grid-gallery .gallery-item').each(function(){
+		var image = $('img', this),
+				imgPath = image.attr('src');
 
-
-
-
+		$(this).css('background-image', "url('../"+imgPath+"')");
+	});
 
 	//Lightbox Display with Clicked Image\
-	$('.showcase img').click(function () {
-		var source   = $(this).attr('src'),
-				caption  = $(this).attr('alt');
+	$('.gallery-item').click(function () {
+		var source   = $('img', this).attr('src'),
+				caption  = $('img', this).attr('alt'),
+				credits  = $('.credits', this),
+				notes    = $('.notes', this),
+				soloText = $('.this-alone', this);
+
 		$('#lightBox img').attr({'src': source, 'alt': caption});
-		$('#img-caption').text(caption);
+		credits.clone().appendTo('.grid-half:first-child');
+		notes.clone().appendTo('.grid-half:last-child');
+		soloText.clone().appendTo('.modal-content');
+
+
 		$('#lightBox').fadeIn();
 	});
 
 	$('#lightBox').click(function () {
 		$(this).fadeOut();
+		$('.credits, .notes, .this-alone', this).remove();
 	});
 
 	// Scroll Gallery
