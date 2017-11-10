@@ -173,14 +173,16 @@ $(document).ready(function() {
 
 	// Scroll Gallery
 	$('.see-below .scroll-item').click(function(){
-		var heading    = $('h3', this),
-				describe   = $('p', this),
-				image 		 = $('img', this);
+		var heading  = $('h3', this),
+				describe = $('.describe', this),
+				image 	 = $('img', this),
+				credits  = $('ul', this);
 
 		$('.open').removeClass('open');
 		$('.description h3').remove();
 		$('.description p').remove();
 		$('.feature-image img').remove(); // If the window is open, just swap src
+		$('.credits ul').remove();
 		$(this).closest('.scroll-holder').addClass('open');
 
 		if($(this).hasClass('viewing') == true)	{
@@ -198,6 +200,8 @@ $(document).ready(function() {
 			image.clone().appendTo('.open .feature-image');
 			heading.clone().appendTo('.open .description');
 			describe.clone().appendTo('.open .description');
+			credits.clone().appendTo('.open .credits');
+
 			$('.toggle-svg').removeClass('closed');
 
 			function resizeGallery() {
