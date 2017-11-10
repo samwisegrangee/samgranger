@@ -255,7 +255,7 @@ section {
     background-image: url("../images/small-img/windy-burrs.jpg"); }
 
   #img-3 {
-    background-image: url("../images/small-img/headshot.jpg"); } }
+    background-image: url("../images/small-img/background.jpg"); } }
 @media (max-width: 480px) {
   .content {
     padding: 1em; } }
@@ -803,7 +803,8 @@ header {
         font-size: 1em;
         margin: 0.5em; }
       .work-container .work-column .client-quote {
-        font-size: 1.5em; } }
+        font-size: 1.5em;
+        padding-left: 1.2em; } }
 /*CONTACT PAGE */
 .contact {
   height: 100vh; }
